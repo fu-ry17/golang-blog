@@ -1,0 +1,27 @@
+
+name: Blog Ci-CD
+
+on:
+  push:
+    branches: [ "main", "master"]
+  pull_request:
+    branches: [ "main", "master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set Up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.22
+
+    - name: Install dependencies
+      run: go mod tidy
+
+    - name: Run test
+      run: go test -v ./...
