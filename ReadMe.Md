@@ -13,8 +13,8 @@ This is a simple blog service built with Go. The project uses Docker for contain
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/Fu-ry17/simple-blog.git
-    cd simple-blog
+    git clone git@github.com:fu-ry17/golang-blog.git
+    cd golang-blog
     ```
 
 2. Ensure you have Docker and Docker Compose installed:
